@@ -31,9 +31,16 @@ public class prueba {
             System.out.println("");
         }
         //Incremento el sueldo un 1%
-        e1.setSueldoBase(e1.getSueldoBase() + (e1.getSueldoBase() / 100));
-        m1.setSueldoBase(m1.getSueldoBase() + (m1.getSueldoBase() / 100));
-        e2.setSueldoBase(e2.getSueldoBase() + (e2.getSueldoBase() / 100));
+        //e1.setSueldoBase(e1.getSueldoBase() + (e1.getSueldoBase() / 100));
+        //m1.setSueldoBase(m1.getSueldoBase() + (m1.getSueldoBase() / 100));
+        //e2.setSueldoBase(e2.getSueldoBase() + (e2.getSueldoBase() / 100));
+        
+        double s;
+        for(int i=0;i<lista.size();i++){
+                
+            s=((Sanitario)lista.get(i)).getSueldoBase();
+            ((Sanitario)lista.get(i)).setSueldoBase((s*1.01));
+            }
 
         System.out.println("Despues de incrementar el sueldo base en un 1%");
         System.out.println("-----------------------------------------------");
